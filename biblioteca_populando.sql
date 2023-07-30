@@ -1,3 +1,5 @@
+-- ----------------- inserção de livros na entidade livros 
+
 INSERT INTO livros (id_livros, titulo, qtd_paginas, editora, genero, autor_id)
 VALUES
   (1, 'Antifa o manual antifacista', 391, 'Autonomia Literaria', 'Politica', NULL),
@@ -6,20 +8,25 @@ VALUES
   (4, '1984', 277, 'Editora Nacional', 'Ficcao', NULL),
   (5, 'Modernidade Liquida', 278, 'Zahar', 'politica', NULL);
   
+  -- -------------- inserção de autores na entidade autores
+
   INSERT INTO autores (id_autor, qtd_livros, pessoa_id) VALUES 
 	(1, 4, null),
     (2, 2, null),
     (3, 7, null),
     (4, 4, null),
     (6, 5, null);
-    
- INSERT INTO autores_livros (autores_id_autor, livros_autor_id) VALUES 
+
+-- ---------------inserção de autores livros
+
+INSERT INTO autores_livros (autores_id_autor, livros_autor_id) VALUES 
 	(1, 1),
     (2, 2),
     (3, 3),
     (4, 4),
     (5, 5);
- 
+
+-- ------------- inserção de valores de emprestimos de livros 
 INSERT INTO emprestimos_livros (id_emprestimo, usuario_id, livro_id) VALUES 
 (1, null, null),
 (2, null, null),
@@ -27,7 +34,8 @@ INSERT INTO emprestimos_livros (id_emprestimo, usuario_id, livro_id) VALUES
 (4, null, null),
 (5, null, null);
 
-    
+-- -------------- inseção de valores de endereços na entidade endereços
+
 INSERT INTO enderecos (id_endereco, logradouro, numero, complemento, cep, bairro, cidade, estado, pais) VALUES
 (1, 'Rua Felisbeto Ferreira', 12, 'casa', 83704230, 'Mandatuba', 'Carmopolis', 'MG', 'Brasil'),
 (2, 'Avenida Das Flores', 25, 'Apartamento', 12345678, 'Cidade Jardim', 'Belavista', 'SP', 'Brasil'),
@@ -35,12 +43,16 @@ INSERT INTO enderecos (id_endereco, logradouro, numero, complemento, cep, bairro
 (4, 'Travessa das Araras', 9, 'Casa', 98765432, 'Florestal', 'Serra Azul', 'ES', 'Brasil'),
 (5, 'Praça do Sol', 16, 'Bloco B', 54321098, 'Solaris', 'Alvorada', 'RS', 'Brasil');
 
+-- ----------------inserção de funcionarios na entidade funcionarios
+
 INSERT INTO funcionarios (id_funcionario, cargo, senha, data_admissao, pessoa_id) VALUES
 (1, 'bibliotecario', '12358f', '2010-07-05', null),
 (2, 'seguranca', 'aBcDeFg', '2023-03-12', null),
 (3, 'professor', 'pass123', '2019-09-22', null),
 (4, 'estagiario', 'mypassword', '2022-11-30', null),
 (5, 'pesquisador', 'researcher321', '2021-06-18', null);
+
+-- ----------------inserção de pessoas na entidade pessoas
 
 INSERT INTO pessoas (id_pessoa, nome, email, cpf, telefone, data_nascimento, endereco_id) VALUES
 (1, 'Pablito Periquito', 'pablito@uol.com.br', '07765890562', 999836599, '1991-07-20', null),
@@ -64,14 +76,18 @@ INSERT INTO pessoas (id_pessoa, nome, email, cpf, telefone, data_nascimento, end
 (19, 'Bianca Rodrigues', 'bianca.rodrigues@gmail.com', '11100099988', 900009997, '1982-11-29', null),
 (20, 'Marina Sampaio', 'marina.sampaio@hotmail.com', '00099988877', 988776665, '1998-10-02', null);
 
+-- ---------------------inserção de valores na entidade pessoas_autores
+
 INSERT INTO pessoas_autores (pessoas_id_pessoa, autores_pessoa_id) VALUES 
 	(1,1),
     (2,2),
     (3,3),
     (4,4),
     (5,5);
-    
- INSERT INTO usuarios (id_usuario, senha, pessoa_id) VALUES 
+
+    -- -----------------inserção de valores na entidade usuarios
+
+INSERT INTO usuarios (id_usuario, senha, pessoa_id) VALUES 
 	(1, 'flavindopneu12', null),
 	(2, 'carlos123', null),
 	(3, 'andreia_87', null),
