@@ -1,5 +1,5 @@
-create database biblioteca_renato;
-use biblioteca_renato;
+CREATE DATABASE biblioteca_renato;
+USE biblioteca_renato;
 
 CREATE TABLE `pessoas` (
   `id_pessoa` integer PRIMARY KEY,
