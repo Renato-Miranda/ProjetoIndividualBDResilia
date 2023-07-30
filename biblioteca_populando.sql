@@ -6,14 +6,14 @@ VALUES
   (4, '1984', 277, 'Editora Nacional', 'Ficcao', NULL),
   (5, 'Modernidade Liquida', 278, 'Zahar', 'politica', NULL);
   
-  insert into autores (id_autor, qtd_livros, pessoa_id) values 
+  INSERT INTO autores (id_autor, qtd_livros, pessoa_id) VALUES 
 	(1, 4, null),
     (2, 2, null),
     (3, 7, null),
     (4, 4, null),
     (6, 5, null);
     
- insert into autores_livros (autores_id_autor, livros_autor_id) values 
+ INSERT INTO autores_livros (autores_id_autor, livros_autor_id) VALUES 
 	(1, 1),
     (2, 2),
     (3, 3),
